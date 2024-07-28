@@ -5,21 +5,99 @@
 
 body {
     margin: 0;
-    padding: 16px 16px;
+    padding: 16px;
+    background-color: #f0f2f5;
+    color: #333;
 }
 
-.non-auth-area {
-    display: none;
+h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 20px;
 }
 
+.checking-auth-area,
+.non-auth-area,
 .auth-area {
-    display: none;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-#chat-messages-div {
+.btn {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.btn.primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn.primary:hover {
+    background-color: #0056b3;
+}
+
+.btn.secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn.secondary:hover {
+    background-color: #5a6268;
+}
+
+.auth-area nav {
+    margin-bottom: 20px;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chat-messages {
     border: 1px solid #ccc;
+    width: 100%;
+    max-width: 600px;
     height: 300px;
     overflow-y: scroll;
     padding: 10px;
-    background-color: #f9f9f9;
+    background-color: #fff;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.chat-input-area {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    align-items: center;
+    gap: 10px;
+}
+
+.chat-select,
+.chat-input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    flex: 1;
+}
+
+.chat-input {
+    flex: 3;
+}
+
+.chat-input::placeholder {
+    color: #aaa;
+}
+
+#send-button {
+    flex: 1;
 }

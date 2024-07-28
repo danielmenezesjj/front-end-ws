@@ -1,37 +1,38 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
 
 <head>
-    <title>Chat estudos</title>
+    <meta charset="UTF-8">
+    <title>Chat Estudos</title>
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 </head>
 
 <body>
-    <h1>Chat estudos</h1>
+    <h1>Chat Estudos</h1>
 
     <div class="checking-auth-area">
         Verificando login...
     </div>
 
     <div class="non-auth-area">
-        <button id="login-button">Entrar</button>
+        <button id="login-button" class="btn primary">Entrar</button>
     </div>
 
     <div class="auth-area">
         <nav>
-            <button id="connect-button">Conectar</button>
-            <button id="logout-button">Sair</button>
+            <button id="connect-button" class="btn primary">Conectar</button>
+            <button id="logout-button" class="btn secondary">Sair</button>
         </nav>
         <p>Olá, <span class="user-name">...</span></p>
-        <div>
-            <div id="chat-messages-div">
-            </div>
-            <div>
-                <select id="chat-users-select">
+        <div class="chat-container">
+            <div id="chat-messages-div" class="chat-messages"></div>
+            <div class="chat-input-area">
+                <select id="chat-users-select" class="chat-select">
                     <option>...</option>
                 </select>
-                <input type="text" id="chat-message-input" />
-                <button id="send-button">Enviar</button>
+                <input type="text" id="chat-message-input" class="chat-input" placeholder="Digite sua mensagem..." />
+                <button id="send-button" class="btn primary">Enviar</button>
             </div>
         </div>
     </div>
